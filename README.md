@@ -57,8 +57,8 @@ Setup Instructions
 Clone the repository to your local machine:
 
 
-git clone https://github.com/your-username/chat-application.git
-cd chat-application
+https://github.com/ajitsirg/testingdemo.git
+cd testingdemo
 2. Create a Virtual Environment
 Create and activate a virtual environment:
 
