@@ -20,17 +20,16 @@ class CustomUser(AbstractUser):
     status_message = models.CharField(max_length=255, blank=True, null=True)
     last_login_time = models.DateTimeField(null=True, blank=True)
 
-    # Add unique related_name for groups and user_permissions
     groups = models.ManyToManyField(
         Group,
-        related_name="customuser_groups",  # Unique related_name
+        related_name="customuser_groups", 
         blank=True,
         verbose_name="groups",
         help_text="The groups this user belongs to.",
     )
     user_permissions = models.ManyToManyField(
         Permission,
-        related_name="customuser_user_permissions",  # Unique related_name
+        related_name="customuser_user_permissions", 
         blank=True,
         verbose_name="user permissions",
         help_text="Specific permissions for this user.",

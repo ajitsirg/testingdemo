@@ -7,7 +7,7 @@ from .models import CustomUser, Message, GroupChat
 from .serializers import CustomUserSerializer, MessageSerializer, GroupChatSerializer
 
 
-# User Views
+
 class UserListView(generics.ListAPIView):
     queryset = CustomUser.objects.all()
     serializer_class = CustomUserSerializer
@@ -25,7 +25,6 @@ class UserDetailView(generics.RetrieveUpdateAPIView):
         return self.request.user
 
 
-# Message Views
 class MessageCreateView(generics.CreateAPIView):
     queryset = Message.objects.all()
     serializer_class = MessageSerializer

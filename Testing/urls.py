@@ -9,17 +9,14 @@ schema_view = get_schema_view(
     openapi.Info(
         title="Chat Application API",
         default_version='v1',
-        description="API documentation for the Chat Application",
-        terms_of_service="https://www.example.com/terms/",
-        contact=openapi.Contact(email="contact@example.com"),
-        license=openapi.License(name="MIT License"),
+        description="Chat Application",
     ),
     public=True,
     permission_classes=(permissions.AllowAny,),
 )
 
 urlpatterns = [
-    # Admin URL
+    
     path('admin/', admin.site.urls),
 
     # Swagger and ReDoc URLs
@@ -27,6 +24,5 @@ urlpatterns = [
     path('swagger/', schema_view.with_ui('swagger', cache_timeout=0), name='schema-swagger-ui'),
     path('redoc/', schema_view.with_ui('redoc', cache_timeout=0), name='schema-redoc'),
 
-    # Include your app's URLs
-    path('api/', include('chat.urls')),  # Replace 'chat' with your app name
+    path('api/', include('chat.urls')),
 ]
